@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flipkart Navbar with Dots Menu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background: white;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 1000;
+    }
+
+    /* Logo */
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #2874f0;
+    }
+    .logo span {
+      font-size: 12px;
+      color: #ffcc00;
+    }
+
+    /* Search */
+    .search-bar {
+      flex: 1;
+      margin: 0 20px;
+    }
+    .search-bar input {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      outline: none;
+    }
+
+    /* Right menu */
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .menu a {
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+      position: relative;
+    }
+    .menu a:hover { color: #2874f0; }
+
+    /* Dropdown wrapper */
+    .dropdown {
+      position: relative;
+    }
+
+    /* Dropdown button styles */
+    .dropdown > a {
+      padding: 6px 12px;
+      background: #2874f0;
+      color: white !important;
+      border-radius: 2px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* Dropdown content */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 130%;
+      right: 0;
+      background: white;
+      min-width: 220px;
+      border-radius: 4px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      overflow: hidden;
+    }
+
+    /* Dropdown arrow */
+    .dropdown-content::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      right: 20px;
+      border-width: 0 10px 10px 10px;
+      border-style: solid;
+      border-color: transparent transparent white transparent;
+    }
+
+    /* Dropdown links */
+    .dropdown-content a {
+      display: block;
+      padding: 12px;
+      font-size: 14px;
+      color: #333;
+      text-decoration: none;
+      border-bottom: 1px solid #f1f1f1;
+    }
+    .dropdown-content a:hover {
+      background: #f9f9f9;
+      color: #2874f0;
+    }
+
+    /* Show dropdown on hover */
+    .dropdown:hover .dropdown-content { display: block; }
+
+    /* Special styling for 3-dot menu */
+    .dots {
+      font-size: 20px;
+      cursor: pointer;
+      color: #333;
+      padding: 0 6px;
+    }
+    .dots:hover { color: #2874f0; }
+
+    /* Categories */
+    .categories {
+      display: flex;
+      justify-content: space-around;
+      padding: 12px 20px;
+      background: white;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    .categories div {
+      text-align: center;
+      font-size: 13px;
+      color: #333;
+      width: 90px;
+      cursor: pointer;
+    }
+    .categories div:hover { color: #2874f0; }
+    .categories img {
+      display: block;
+      margin: 0 auto 5px;
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">Flipkart <span>Plus ✦</span></div>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search for Products, Brands and More">
+    </div>
+
+    <div class="menu">
+      <!-- Login Dropdown -->
+      <div class="dropdown">
+        <a>Login</a>
+        <div class="dropdown-content">
+          <a href="#">My Profile</a>
+          <a href="#">Orders</a>
+          <a href="#">Wishlist</a>
+          <a href="#">Rewards</a>
+          <a href="#">Gift Cards</a>
+        </div>
+      </div>
+
+      <a href="#">Cart 🛒</a>
+      <a href="#">Become a Seller</a>
+
+      <!-- 3 dots dropdown -->
+      <div class="dropdown">
+        <span class="dots">⋮</span>
+        <div class="dropdown-content">
+          <a href="#">Notification Preferences</a>
+          <a href="#">24x7 Customer Care</a>
+          <a href="#">Advertise</a>
+          <a href="#">Download App</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Categories with Flipkart-style images (replace URLs with real Flipkart ones) -->
+  <div class="categories">
+    <div><img src="Minutes.webp"/><p>Minutes</p></div>
+    <div><img src="Mobile.jpeg"/><p>Mobiles & Tablets</p></div>
+    <div><img src="Fashion.webp"/><p>Fashion</p></div>
+    <div><img src="Electronics.webp"/><p>Electronics</p></div>
+    <div><img src="Furniture.webp"/><p>Home & Furniture</p></div>
+    <div><img src="Appliance.webp"/><p>TVs & Appliances</p></div>
+    <div><img src="Flight.webp"/><p>Flight Bookings</p></div>
+    <div><img src="Beauty.webp"/><p>Beauty Products</p></div>
+    <div><img src="Grocery.jpeg"/><p>Grocery</p></div>
+  </div>
+
+</body>
+</html>
+
+

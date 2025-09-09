@@ -4,57 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* light blue background */
+            padding: 20px;
+        }
+
+        form {
+            width: 400px;
+            margin: auto;
+            background: #fff;
+            border: 2px solid #4CAF50;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        select,
+        input[type="file"] {
+            width: 95%;
+            padding: 8px;
+            margin: 6px 0 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            display: block;
+            transition: 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        input[type="email"]:focus,
+        select:focus,
+        input[type="file"]:focus {
+            border-color: #4CAF50;
+            box-shadow: 0 0 6px rgba(76, 175, 80, 0.5);
+            outline: none;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 6px;
+            cursor: pointer;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        input[type="file"] {
+            background-color: #f9f9f9;
+            cursor: pointer;
+        }
+
+        input[type="file"]:hover {
+            background-color: #e8f5e9; /* light green on hover */
+        }
+    </style>
 </head>
 <body>
     <form>
         <label>Student name</label>
-        <input type = "text"><br><br><br>
+        <input type="text"><br><br><br>
+
         <label>Student password</label>
         <input type="password"><br><br><br>
+
         <label>Email address</label>
         <input type="email"><br><br><br>
+
         <!--radio-->
-        <br>
         <label>Gender</label><br>
         <input type="radio" id="html" name="abc" value="html" >
         <label>Female</label><br>
         <input type="radio" id="html" name="abc" value="html" >
         <label>Male</label><br>
-        <input type="radio" id="html"name="abc" value="html">
-        <label>Other</label><br>
-        <br>
+        <input type="radio" id="html" name="abc" value="html">
+        <label>Other</label><br><br>
 
         <!--checkbox-->
-        <br>
         <label>Education</label><br>
         <input type="checkbox">
         <label>Class 10</label><br>
-         <input type ="checkbox">
+        <input type="checkbox">
         <label>Class 12</label><br>
-        <input type ="checkbox">
+        <input type="checkbox">
         <label>B.TECH</label><br>
-        <input type ="checkbox">
-        <label>M.TECH</label><br>
-        <br>
+        <input type="checkbox">
+        <label>M.TECH</label><br><br>
+
         <!--select-->
         <label>Select Your City</label>
         <select>
-        <option>Meerut</option>
-        <option>Ghaziabad</option>
-        <option>Goa</option>
-        <option>Delhi</option>
-        <option>Mumbai</option>
+            <option>Meerut</option>
+            <option>Ghaziabad</option>
+            <option>Goa</option>
+            <option>Delhi</option>
+            <option>Mumbai</option>
         </select>
         <br>
-    <!--button-->
+
+        <!--button-->
         <!--<button>Click<button>-->
-        <input type="submit"><br>
-        
-            <!--file-->
-            <!-- <br>
-            <label>Select your file</label>
-            <input type="file"> -->
-           </form>
-    
+        <input type="submit"><br><br>
+
+        <!--file-->
+        <label>Select your file</label>
+        <input type="file">
+    </form>
 </body>
 </html>
